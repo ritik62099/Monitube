@@ -28,7 +28,9 @@ app.use('/api/products', productRoutes); // Product-related routes
 app.use('/api/orders', orderRoutes);
 app.use('/cart', cartRoutes); // Use cart routes
 app.use('/api', bookingRoutes);  // All booking-related routes will be prefixed with /api
-
+app.get('/', (res, req)=>{
+      res.send("work");
+})
 
 const PORT = 5000; // Backend port
 app.listen(PORT, '0.0.0.0', () => {
