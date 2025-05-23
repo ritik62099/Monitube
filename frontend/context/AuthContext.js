@@ -14,9 +14,11 @@ export const AuthProvider = ({ children }) => {
   const login = async (email, password) => {
     try {
       const response = await axios.post('http://10.0.2.2:5000/api/auth/login', { email, password });
+      // const response = await axios.post('http://192.168.176.91:5000/api/auth/login', { email, password });
       const { token, name, profileImage } = response.data;
 
       const baseUrl = 'http://10.0.2.2:5000/'; // Local development (Android Emulator)
+      // const baseUrl = 'http://192.168.176.91:5000/'; // Local development (Android Emulator)
       const fullProfileImageUrl = `${baseUrl}${profileImage}`;
 
       if (!token || !name || !profileImage) {

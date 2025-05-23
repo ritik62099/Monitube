@@ -23,7 +23,7 @@ const productSchema = new mongoose.Schema(
     description: { type: String, required: true },
     user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true }, // Reference to the User model
     image: { type: String, required: true }, // Path to the uploaded image
-    service: { type: String, required: true, enum: ['channel','content','script','seo','thumbnail','analytics','advertiser'] }, // service type
+    service: { type: String, required: true, enum: ['channel','content','script','seo','thumbnail','analytics','advertiser','videoediting'] }, // service type
   },
   { timestamps: true }  // Automatically adds createdAt and updatedAt timestamps
 );

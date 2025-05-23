@@ -32,4 +32,7 @@ app.get('/', (res, req)=>{
       res.send("work");
 })
 
-module.exports = app; 
+const PORT = 5000; // Backend port
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server running on http://192.168.176.126:${PORT}`);
+});

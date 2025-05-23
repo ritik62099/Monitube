@@ -51,8 +51,8 @@ const SignupScreen = ({ navigation }) => {
         });
       }
 
-      const response = await axios.post(
-        'http://10.0.2.2:5000/api/auth/signup',
+      const response = await axios.post('http://10.0.2.2:5000/api/auth/signup',
+        // const response = await axios.post('http://192.168.176.91:5000/api/auth/signup',
         formData,
         {
           headers: { 'Content-Type': 'multipart/form-data' },
@@ -72,7 +72,9 @@ const SignupScreen = ({ navigation }) => {
 
   const verifyOTP = async () => {
     try {
-      const res = await axios.post('http://10.0.2.2:5000/api/auth/verify-otp', {
+      const res = await axios.post('http://10.0.2.2:5000/api/auth/verify-otp', 
+        // const res = await axios.post('http://192.168.176.91:5000/api/auth/verify-otp', 
+      {
         email,
         otp,
       });

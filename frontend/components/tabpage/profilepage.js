@@ -13,6 +13,7 @@ const Profilepage = ({ navigation }) => {
   const [isInfoOpen, setIsInfoOpen] = useState(false); // New state for Information section
 
   const baseUrl = 'http://10.0.2.2:5000/';
+  // const baseUrl = 'http://192.168.176.91:5000/';
   const formattedProfileImage = profileImage ? profileImage.replace(/\\/g, '/') : '';
   const fullImageUrl = profileImage?.startsWith('http')
     ? profileImage
